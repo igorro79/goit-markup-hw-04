@@ -4,6 +4,7 @@
   --accent-color: #2196f3;
   --secondary-accent-color: #ffffff;
   --grey-bgc: #2f303a;
+  --partner-icon: #afb1b8;
 }
 /* =======COMPONENTS======== */
 body {
@@ -84,11 +85,16 @@ a {
   font-weight: 500;
   line-height: 1.14px;
   letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
 }
 
 .auth-nav-link:hover,
-.auth-nav-link:focus {
+.auth-nav-link:focus,
+.auth-icon:hover,
+.auth-icon:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .page-header .container {
@@ -230,15 +236,15 @@ a {
   background-color: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
-
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .feachers-icon {
   display: block;
-  height: 100%;
-  width: 100%;
+  height: 70px;
+  width: 70px;
 }
 
 /* =========== END OF иконки приимуществ ==========*/
@@ -349,9 +355,10 @@ a {
   margin-right: auto;
 }
 .icons-thumb {
+  display: flex;
   outline: 1px solid green;
-  height: 44px;
-  width: 44px;
+  height: 34px;
+  width: 34px;
   /* background-color: #ccc; */
   background-position: center;
   justify-content: space-around;
@@ -370,28 +377,61 @@ a {
 
 /*============= Постоянные клиенты =========== */
 
-.partners .list {
+.partners-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .partners-thumb {
   width: 170px;
-  display: block;
+  display: flex;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  object-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.clients-logo {
-  display: block;
-  height: 100%;
-  width: 100%;
-  object-fit: none;
-}
+/* .partners-list .items:nth-child(1) .partners-logo */
 
-/*   =========== footer  ==============  */
+.partner1 {
+  height: 49.23px;
+  width: 44.27px;
+  fill: var(--partner-icon);
+}
+.partner2 {
+  width: 40px;
+  height: 52px;
+  fill: var(--partner-icon);
+}
+.partner3 {
+  width: 41px;
+  height: 42.6px;
+  fill: var(--partner-icon);
+}
+.partner4 {
+  height: 42.02px;
+  width: 79.66px;
+  fill: var(--partner-icon);
+}
+.partner5 {
+  width: 59px;
+  height: 47px;
+  fill: var(--partner-icon);
+}
+.partner6 {
+  height: 45.44px;
+  width: 88.5px;
+  fill: var(--partner-icon);
+}
+/* .partners-accent:hover,
+.partners-accent:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+} */
+
+/*   ============== footer  ==============  */
 
 .footer {
   background-color: var(--grey-bgc);
