@@ -94,6 +94,7 @@ a {
 .page-header .container {
   display: flex;
 }
+
 .main-nav {
   display: flex;
   align-items: center;
@@ -115,6 +116,18 @@ a {
   align-items: center;
 }
 
+.auth-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  align-items: center;
+  fill: var(--primary-text-color);
+}
+
+.auth-nav .items {
+  align-items: center;
+}
+
 .auth-nav .items + .items {
   margin-left: 50px;
 }
@@ -124,7 +137,16 @@ a {
 /* ============== HERO ============ */
 
 .hero-section {
+  background-image: linear-gradient(
+      to left,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg-opt.jpg);
   background-color: var(--grey-bgc);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-section .container {
@@ -187,7 +209,6 @@ a {
 .feachers-list {
   display: flex;
   justify-content: center;
-  list-style: none;
   margin-left: auto;
   margin-right: auto;
   padding: 0px;
@@ -201,6 +222,26 @@ a {
 .feachers-list .items + .items {
   margin-left: 30px;
 }
+
+/* ============== иконки приимуществ ==============*/
+
+.thumb {
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.feachers-icon {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/* =========== END OF иконки приимуществ ==========*/
 
 .feachers-list-title {
   color: var(--secondary-text-color);
@@ -258,7 +299,8 @@ a {
 .team {
   background-color: #f5f4fa;
 }
-.team .container {
+.team .container,
+.partners .container {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -298,6 +340,55 @@ a {
   text-align: center;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+
+.team .icon-list {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.icons-thumb {
+  outline: 1px solid green;
+  height: 44px;
+  width: 44px;
+  /* background-color: #ccc; */
+  background-position: center;
+  justify-content: space-around;
+  border-radius: 50%;
+}
+.team-icons {
+  display: block;
+  /* width: 30px;
+  height: 30px; */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  fill: var(--primary-text-color);
+}
+
+/*============= Постоянные клиенты =========== */
+
+.partners .list {
+  display: flex;
+  justify-content: center;
+}
+
+.partners-thumb {
+  width: 170px;
+  display: block;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  object-position: center;
+}
+
+.clients-logo {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: none;
 }
 
 /*   =========== footer  ==============  */
