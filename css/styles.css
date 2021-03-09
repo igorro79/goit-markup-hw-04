@@ -405,6 +405,7 @@ icon-items-link:focus .team-icons,
   background-color: var(--grey-bgc);
 }
 .footer .container {
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -459,7 +460,7 @@ icon-items-link:focus .team-icons,
   display: flex;
 }
 
-.main-footef-list-items:not(:last-child) {
+.footer-wraper:not(:last-child) {
   margin-right: 70px;
 }
 
