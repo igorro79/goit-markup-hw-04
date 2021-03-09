@@ -89,10 +89,10 @@ a {
   align-items: center;
 }
 
+.auth-nav-link:hover .auth-icon,
+.auth-nav-link:focus .auth-icon,
 .auth-nav-link:hover,
-.auth-nav-link:focus,
-.auth-icon:hover,
-.auth-icon:focus {
+.auth-nav-link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -143,16 +143,21 @@ a {
 /* ============== HERO ============ */
 
 .hero-section {
+  background-color: var(--grey-bgc);
+}
+.wrap-hero {
   background-image: linear-gradient(
       to left,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hero-bg-opt.jpg);
-  background-color: var(--grey-bgc);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-section .container {
@@ -239,12 +244,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.feachers-icon {
-  display: block;
-  height: 70px;
-  width: 70px;
+  border-radius: 4px;
 }
 
 /* =========== END OF иконки приимуществ ==========*/
@@ -326,8 +326,7 @@ a {
   width: 270px;
 }
 .team-cards-descr {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
 }
 
 .card-name {
@@ -356,23 +355,21 @@ a {
 }
 .icons-thumb {
   display: flex;
-  outline: 1px solid green;
-  height: 34px;
-  width: 34px;
-  /* background-color: #ccc; */
-  background-position: center;
-  justify-content: space-around;
+  height: 44px;
+  width: 44px;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
 }
 .team-icons {
-  display: block;
-  /* width: 30px;
-  height: 30px; */
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
   fill: var(--primary-text-color);
+}
+.icon-items-link:focus .icons-thumb,
+.icon-items-link:hover .icons-thumb,
+icon-items-link:focus .team-icons,
+.icon-items-link:hover .team-icons {
+  fill: var(--secondary-accent-color);
+  background-color: var(--accent-color);
 }
 
 /*============= Постоянные клиенты =========== */
@@ -384,52 +381,23 @@ a {
 
 .partners-thumb {
   width: 170px;
-  display: flex;
   height: 90px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--partner-icon);
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* .partners-list .items:nth-child(1) .partners-logo */
-
-.partner1 {
-  height: 49.23px;
-  width: 44.27px;
+.partner-logo {
   fill: var(--partner-icon);
 }
-.partner2 {
-  width: 40px;
-  height: 52px;
-  fill: var(--partner-icon);
-}
-.partner3 {
-  width: 41px;
-  height: 42.6px;
-  fill: var(--partner-icon);
-}
-.partner4 {
-  height: 42.02px;
-  width: 79.66px;
-  fill: var(--partner-icon);
-}
-.partner5 {
-  width: 59px;
-  height: 47px;
-  fill: var(--partner-icon);
-}
-.partner6 {
-  height: 45.44px;
-  width: 88.5px;
-  fill: var(--partner-icon);
-}
-/* .partners-accent:hover,
-.partners-accent:focus {
+.partners-link:hover .partner-logo {
   fill: var(--accent-color);
-  border-color: var(--accent-color);
-} */
+}
+.partners-link:hover .partners-thumb {
+  border: 1px solid var(--accent-color);
+}
 
 /*   ============== footer  ==============  */
 
@@ -440,7 +408,9 @@ a {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
+.main-footer-list {
+  display: flex;
+}
 .footer .logo-text {
   color: var(--secondary-accent-color);
 
@@ -475,9 +445,36 @@ a {
   margin-bottom: 9px;
 }
 
-/*========== portfolio page ======== */
+.invitation {
+  color: var(--secondary-accent-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
 
-/*===========  portfolio page / main ============= */
+.footer .icon-list {
+  display: flex;
+}
+
+.main-footef-list-items:not(:last-child) {
+  margin-right: 70px;
+}
+
+.icon-list-items:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer .icons-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-icons {
+  fill: var(--secondary-accent-color);
+}
+
+/*========== portfolio page ======== */
 
 .filter-list {
   display: flex;
